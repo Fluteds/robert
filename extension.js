@@ -2493,7 +2493,7 @@
                 type: 'startsWith',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
-                    if (!TMBot.commands.executable(this.rank, chat)) return void(0);
+                    if (!robert.commands.executable(this.rank, chat)) return void(0);
                     else {
                         var msg = chat.message;
                         if (msg.length !== cmd.length) {
@@ -2517,13 +2517,13 @@
                             var commatag = tag.replace(/ /g, ', ');
                             get_id(api_key, tag, function(id) {
                                 if (typeof id !== 'undefined') {
-                                    API.sendChat(subChat(TMBot.chat.validgiftags, {
+                                    API.sendChat(subChat(robert.chat.validgiftags, {
                                         name: chat.un,
                                         id: id,
                                         tags: commatag
                                     }));
                                 } else {
-                                    API.sendChat(subChat(TMBot.chat.invalidgiftags, {
+                                    API.sendChat(subChat(robert.chat.invalidgiftags, {
                                         name: chat.un,
                                         tags: commatag
                                     }));
@@ -2546,12 +2546,12 @@
                             var rating = 'pg-13'; // PG 13 gifs
                             get_random_id(api_key, function(id) {
                                 if (typeof id !== 'undefined') {
-                                    API.sendChat(subChat(TMBot.chat.validgifrandom, {
+                                    API.sendChat(subChat(robert.chat.validgifrandom, {
                                         name: chat.un,
                                         id: id
                                     }));
                                 } else {
-                                    API.sendChat(subChat(TMBot.chat.invalidgifrandom, {
+                                    API.sendChat(subChat(robert.chat.invalidgifrandom, {
                                         name: chat.un
                                     }));
                                 }
@@ -2567,10 +2567,10 @@
                 type: 'exact',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
-                    if (!TMBot.commands.executable(this.rank, chat)) return void(0);
+                    if (!robert.commands.executable(this.rank, chat)) return void(0);
                     else {
                         var link = '(Updated link coming soon)';
-                        API.sendChat(subChat(TMBot.chat.starterhelp, {
+                        API.sendChat(subChat(robert.chat.starterhelp, {
                             link: link
                         }));
                     }
@@ -3559,7 +3559,7 @@
                  type: 'exact',
                  functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!TMBot.commands.executable(this.rank, chat)) return void (0);
+                    if (!robert.commands.executable(this.rank, chat)) return void (0);
                     else {
                             API.sendChat("plug.dj guide: http://i.imgur.com/ZeRR07N.png");
                     }
@@ -4176,19 +4176,19 @@
                 type: 'exact',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
-                    if (!TMBot.commands.executable(this.rank, chat)) return void(0);
+                    if (!robert.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        if (TMBot.settings.welcome) {
-                            TMBot.settings.welcome = !TMBot.settings.welcome;
-                            return API.sendChat(subChat(TMBot.chat.toggleoff, {
+                        if (robert.settings.welcome) {
+                            robert.settings.welcome = !robert.settings.welcome;
+                            return API.sendChat(subChat(robert.chat.toggleoff, {
                                 name: chat.un,
-                                'function': TMBot.chat.welcomemsg
+                                'function': robert.chat.welcomemsg
                             }));
                         } else {
-                            TMBot.settings.welcome = !TMBot.settings.welcome;
-                            return API.sendChat(subChat(TMBot.chat.toggleon, {
+                            robert.settings.welcome = !robert.settings.welcome;
+                            return API.sendChat(subChat(robert.chat.toggleon, {
                                 name: chat.un,
-                                'function': TMBot.chat.welcomemsg
+                                'function': robert.chat.welcomemsg
                             }));
                         }
                     }
