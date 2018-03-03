@@ -112,7 +112,7 @@
 
     var loadChat = function(cb) {
         if (!cb) cb = function() {};
-        $.get("https://rawgit.com/NotFluted/robert/master/lang/en.json", function(json) {
+        $.get("https://rawgit.com/NotFluted/robert/master/lang/langindex.json", function(json) {
             var link = robert.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
@@ -254,19 +254,19 @@
         name: "Robert",
         loggedInID: "33104203",
         scriptLink: "https://rawgit.com/NotFluted/robert/master/extension.js",
-        cmdLink: "https://goo.gl/4BQP8Y",
-        chatLink: "https://rawgit.com/NotFluted/robert/master/lang/en.json",
+        cmdLink: "https://goo.gl/BX4kGw",
+        chatLink: "https://rawgit.com/NotFluted/robert/master/lang/langindex.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "Fluted Bot",
+            botName: "Robert",
             language: "english",
-            chatLink: "https://rawgit.com/NotFluted/robert/master/lang/en.json",
+            chatLink: "https://rawgit.com/NotFluted/robert/master/lang/langindex.json",
             scriptLink: "https://rawgit.com/NotFluted/robert/master/extension.js",
             roomLock: false, // Requires an extension to re-load the script
-            startupCap: 10, // 1-200
+            startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
             startupEmoji: false, // true or false
             autowoot: true,
@@ -2735,12 +2735,12 @@
                         }));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get('https://rawgit.com/NotFluted/robert/master/lang/en.json', function(json) {
+                        $.get('https://rawgit.com/NotFluted/robert/master/lang/langindex.json', function(json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === 'undefined') {
                                 API.sendChat(subChat(robert.chat.langerror, {
-                                    link: 'http://git.io/vJ9nI'
+                                    link: 'https://rawgit.com/NotFluted/robert/master/lang/langindex.json'
                                 }));
                             } else {
                                 robert.settings.language = argument;
