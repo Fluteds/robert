@@ -180,7 +180,7 @@
         var json_sett = null;
         var roominfo = document.getElementById('room-settings');
         info = roominfo.textContent;
-        var ref_bot = '@UGM | Bot=';
+        var ref_bot = '@robert | Bot=';
         var ind_ref = info.indexOf(ref_bot);
         if (ind_ref > 0) {
             var link = info.substring(ind_ref + ref_bot.length, info.length);
@@ -343,7 +343,7 @@
             autoskipTimer: null,
             autodisableInterval: null,
             autodisableFunc: function() {
-                if (UGM.status && UGM.settings.autodisable) {
+                if (robert.status && robert.settings.autodisable) {
                     API.sendChat('!afkdisable');
                     API.sendChat('!joindisable');
                 }
@@ -391,7 +391,7 @@
                     robert.room.roulette.rouletteStatus = false;
                     var ind = Math.floor(Math.random() * robert.room.roulette.participants.length);
                     var winner = robert.room.roulette.participants[ind];
-                    UGM.room.roulette.participants = [];
+                    robert.room.roulette.participants = [];
                     var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);
                     var user = robert.userUtilities.lookupUser(winner);
                     var name = user.username;
