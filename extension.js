@@ -112,7 +112,7 @@
 
     var loadChat = function(cb) {
         if (!cb) cb = function() {};
-        $.get("https://rawgit.com/NotFluted/robert/master/lang/langindex", function(json) {
+        $.get("https://rawgit.com/NotFluted/robert/master/lang/en.json", function(json) {
             var link = robert.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
@@ -255,7 +255,7 @@
         loggedInID: "33104203",
         scriptLink: "https://rawgit.com/NotFluted/robert/master/extension.js",
         cmdLink: "https://goo.gl/4BQP8Y",
-        chatLink: "https://rawgit.com/NotFluted/robert/master/lang/langindex",
+        chatLink: "https://rawgit.com/NotFluted/robert/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
