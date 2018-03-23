@@ -243,7 +243,7 @@
 
     var botCreator = "Fluted";
     var botMaintainer = "Fluted";
-    var botCreatorIDs = ["4329931"];
+    var botCreatorIDs = "4329931";
     var resdjs = ["",""];
     var bouncers = ["",""];
     var managers = ["",""];
@@ -268,7 +268,7 @@
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
-            startupEmoji: false, // true or false
+            startupEmoji: true, // true or false
             autowoot: true,
             autoskip: false,
             smartSkip: true,
@@ -291,11 +291,11 @@
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
-            thorCommand: false,
+            thorCommand: true,
             thorCooldown: 10,
             skipPosition: 3,
             skipReasons: [
-                ["theme", "This song does not fit the room theme. "],
+                ["theme", "This song does not fit the room theme. Check the allowed themes by using !theme"],
                 ["op", "This song is on the OP (Over Played) list. "],
                 ["history", "This song is in the history. "],
                 ["mix", "You played a mix, which is against the rules. "],
@@ -307,7 +307,7 @@
             afkRankCheck: "ambassador",
             motdEnabled: true,
             motdInterval: 30,
-            motd: "Hecking Heck.",
+            motd: "Heck. I really have nothing inspirational to say today. Sorry :(",
             filterChat: true,
             etaRestriction: true,
             welcome: true,
@@ -317,7 +317,10 @@
             fbLink: null,
             youtubeLink: null,
             website: null,
-            intervalMessages: [],
+            intervalMessages: [
+		    "None of us really know why you're here since this is a testing room.",
+		    "Find an error with Robert? Let the developers know here: https://goo.gl/rjtvzc"	   
+	    ],
             messageInterval: 5,
             songstats: true,
             commandLiteral: "!",
