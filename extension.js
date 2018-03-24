@@ -307,7 +307,7 @@
             afkRankCheck: "ambassador",
             motdEnabled: true,
             motdInterval: 30,
-            motd: "Heck. I really have nothing inspirational to say today. Sorry :(",
+            motd: "Heck. That really startled me and now I've forgotten what I was supposed to say :(",
             filterChat: true,
             etaRestriction: true,
             welcome: true,
@@ -319,15 +319,16 @@
             website: null,
             intervalMessages: [
 		    "None of us really know why you're here since this is a testing room.",
-		    "Find an error with Robert? Let the developers know here: https://goo.gl/rjtvzc"	   
+		    "Find an error with Robert? Let the developers know here: https://goo.gl/rjtvzc",
+		    "Want to move up the waitlist? The room holds regular Roulette waitlist boosts! Don't forget to type in !join when the roulette is live.
 	    ],
-            messageInterval: 5,
+            messageInterval: 3,
             songstats: true,
             commandLiteral: "!",
             blacklists: {
-                NSFW: 'https://rawgit.com/NotFluted/robert/master/blacklists/NSFWlist.json',
-                OP: 'https://rawgit.com/NotFluted/robert/master/blacklists/OPlist.json',
-                BANNED: 'https://rawgit.com/NotFluted/robert/master/blacklists/BANNEDlist.json'
+                nsfw: 'https://rawgit.com/NotFluted/robert/master/blacklists/NSFWlist.json',
+                op: 'https://rawgit.com/NotFluted/robert/master/blacklists/OPlist.json',
+                banned: 'https://rawgit.com/NotFluted/robert/master/blacklists/BANNEDlist.json'
             }
         },
         room: {
@@ -1001,7 +1002,7 @@
             if (typeof lastplay === 'undefined') return;
             if (robert.settings.songstats) {
                 if (typeof robert.chat.songstatistics === 'undefined') {
-                    API.sendChat('/me ' + lastplay.media.author + ' - ' + lastplay.media.title + ': ' + lastplay.score.positive + 'W/' + lastplay.score.grabs + 'G/' + lastplay.score.negative + 'M.')
+                    API.sendChat('/me ' + lastplay.media.author + ' - ' + lastplay.media.title + ': ' + lastplay.score.positive + 'WOOTS' + lastplay.score.grabs + 'GRABS' + lastplay.score.negative + 'MEHS')
                 } else {
                     API.sendChat(subChat(robert.chat.songstatistics, {
                         artist: lastplay.media.author,
