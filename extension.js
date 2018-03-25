@@ -3503,20 +3503,20 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("Event is here: https://i.imgur.com/dsA1eBx.png?1");
+                            API.sendChat(":eyes:");
                     }
                 }
             },
 		
-	    plugdjCommand: {
-                command: 'plugdj',
+	    plugdiscordCommand: {
+                command: 'plugdiscord',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("plugdj: discord: https://discord.gg/RE8fkzE");
+                            API.sendChat("Did you hear that? plug.dj has an offical Discord! Join here: https://discord.gg/RE8fkzE");
                     }
                 }
             },	
@@ -3529,7 +3529,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("PlugIt: discord: https://discord.gg//DptCswA");
+                            API.sendChat("Get the Plug-it extension here: https://github.com/plug-it/pi/blob/pre-release/readme.md ");
                     }
                 }
             },
@@ -3542,7 +3542,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("plug3: https://goo.gl/UB67zH discord: https://discord.gg/AXVZjT");
+                            API.sendChat("Get the Plug3 (PlugCubed) extension here: https://goo.gl/UB67zH");
                     }
                 }
             },
@@ -3568,7 +3568,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!robert.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("plug.dj guide: http://i.imgur.com/ZeRR07N.png");
+                            API.sendChat("How to use plug.dj: http://i.imgur.com/ZeRR07N.png");
                     }
                  }
             },	
