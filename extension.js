@@ -1,10 +1,13 @@
 /**
+ robert 
 
- Copyright © 2017-2018 robert
+ Copyright © 2017-2018 Fluted 
 
  Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
  This software is not for profit, any extension, or unauthorised person providing this software is not authorised to be in a position of any monetary gain from this use of this software. Any and all money gained under the use of the software (which includes donations) must be passed on to the original author.
 
+ Source repo: basicBot
+ 
  */
 
 (function() {
@@ -1347,7 +1350,7 @@
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             curses: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
+                'nigger', 'faggot', 'nigga', 'niqqa', 'nibba', 'motherfucker', 'modafocka'
             ]
         },
         connectAPI: function() {
@@ -2573,7 +2576,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!robert.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        var link = '(Updated link coming soon)';
+                        var link = '@staff, someone needs your help!';
                         API.sendChat(subChat(robert.chat.starterhelp, {
                             link: link
                         }));
@@ -3461,7 +3464,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!robert.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        API.sendChat('/me Robert, is developed and maintained by Fluted! More information can be found here: https://github.com/NotFluted/robert/blob/master/README.md');
+                        API.sendChat('/me Robert, a custom Javascript browser bot using sources from basicBot is developed and maintained by Fluted! More information can be found here: https://goo.gl/dG7i6y');
                     }
                 }
             },
@@ -3552,7 +3555,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("rcs: https://goo.gl/o6sD2H discord: https://discord.gg/QHvpfNP");
+                            API.sendChat("Get the Radiant Community Script (RCS) extension here: https://goo.gl/o6sD2H");
                     }
                 }
             },
