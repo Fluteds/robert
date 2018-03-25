@@ -5,6 +5,8 @@
  Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
  This software is not for profit, any extension, or unauthorised person providing this software is not authorised to be in a position of any monetary gain from this use of this software. Any and all money gained under the use of the software (which includes donations) must be passed on to the original author.
 
+ Orginal Repo: basicBot
+ 
  */
 
 (function() {
@@ -112,7 +114,7 @@
 
     var loadChat = function(cb) {
         if (!cb) cb = function() {};
-        $.get("https://rawgit.com/NotFluted/robert/master/lang/langindex.json", function(json) {
+        $.get("https://rawgit.com/Fluted/titanmusic/master/langIndex.json", function(json) {
             var link = robert.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
@@ -254,21 +256,21 @@
         name: "Robert",
         loggedInID: "33104203",
         scriptLink: "https://rawgit.com/NotFluted/robert/master/extension.js",
-        cmdLink: "https://goo.gl/BX4kGw",
+        cmdLink: "https://goo.gl/4BQP8Y",
         chatLink: "https://rawgit.com/NotFluted/robert/master/lang/langindex.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "Robert",
+            botName: "robert",
             language: "english",
             chatLink: "https://rawgit.com/NotFluted/robert/master/lang/langindex.json",
             scriptLink: "https://rawgit.com/NotFluted/robert/master/extension.js",
             roomLock: false, // Requires an extension to re-load the script
-            startupCap: 1, // 1-200
+            startupCap: 10, // 1-200
             startupVolume: 0, // 0-100
-            startupEmoji: true, // true or false
+            startupEmoji: false, // true or false
             autowoot: true,
             autoskip: false,
             smartSkip: true,
@@ -295,11 +297,11 @@
             thorCooldown: 10,
             skipPosition: 3,
             skipReasons: [
-                ["theme", "This song does not fit the room theme. Check the allowed themes by using !theme"],
-                ["op", "This song is on the OP (Over Played) list. "],
+                ["theme", "This song does not fit the room theme. "],
+                ["op", "This song is on the OP (over played) list. "],
                 ["history", "This song is in the history. "],
                 ["mix", "You played a mix, which is against the rules. "],
-                ["sound", "The song you played had bad/low sound quality or no sound. "],
+                ["sound", "The song you played had bad sound quality or no sound. "],
                 ["nsfw", "The song you contained was NSFW (image or sound). "],
                 ["unavailable", "The song you played was not available for some users. "]
             ],
@@ -307,28 +309,28 @@
             afkRankCheck: "ambassador",
             motdEnabled: true,
             motdInterval: 30,
-            motd: "Heck. That really startled me and now I've forgotten what I was supposed to say :(",
+            motd: "Heck. I don't really have anything inspirational to tell you today, sorry :(",
             filterChat: true,
             etaRestriction: true,
             welcome: true,
-            opLink: null,
-            rulesLink: "https://goo.gl/yVZiZm",
+            opLink: "https://goo.gl/TEqiFo",
+            rulesLink: "https://goo.gl/LUpQBe",
             themeLink: null,
             fbLink: null,
             youtubeLink: null,
             website: null,
             intervalMessages: [
-		    "None of us really know why you're here since this is a testing room.",
-		    "Find an error with Robert? Let the developers know here: https://goo.gl/rjtvzc",
-		    "Want to move up the waitlist? The room holds regular Roulette waitlist boosts! Don't forget to type in !join when the roulette is live.
-	    ],
-            messageInterval: 3,
+                "Why are you here? This is a testing room."
+                "Need help? Type !help to get the staff's attention."
+                "Found an error with me? Let the developer know here: https://goo.gl/rjtvzc"
+                ],
+            messageInterval: 5,
             songstats: true,
             commandLiteral: "!",
             blacklists: {
-                nsfw: 'https://rawgit.com/NotFluted/robert/master/blacklists/NSFWlist.json',
-                op: 'https://rawgit.com/NotFluted/robert/master/blacklists/OPlist.json',
-                banned: 'https://rawgit.com/NotFluted/robert/master/blacklists/BANNEDlist.json'
+                NSFW: 'https://rawgit.com/NotFluted/robert/master/blacklists/NSFWlist.json',
+                OP: 'https://rawgit.com/NotFluted/robert/master/blacklists/OPlist.json',
+                BANNED: 'https://rawgit.com/NotFluted/robert/master/blacklists/BANNEDlist.json'
             }
         },
         room: {
@@ -1002,7 +1004,7 @@
             if (typeof lastplay === 'undefined') return;
             if (robert.settings.songstats) {
                 if (typeof robert.chat.songstatistics === 'undefined') {
-                    API.sendChat('/me ' + lastplay.media.author + ' - ' + lastplay.media.title + ': ' + lastplay.score.positive + 'WOOTS' + lastplay.score.grabs + 'GRABS' + lastplay.score.negative + 'MEHS')
+                    API.sendChat('/me ' + lastplay.media.author + ' - ' + lastplay.media.title + ': ' + lastplay.score.positive + 'W/' + lastplay.score.grabs + 'G/' + lastplay.score.negative + 'M.')
                 } else {
                     API.sendChat(subChat(robert.chat.songstatistics, {
                         artist: lastplay.media.author,
@@ -2739,12 +2741,12 @@
                         }));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get('https://rawgit.com/NotFluted/robert/master/lang/langindex.json', function(json) {
+                        $.get('https://rawgit.com/robert/source/master/lang/langIndex.json', function(json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === 'undefined') {
                                 API.sendChat(subChat(robert.chat.langerror, {
-                                    link: 'https://rawgit.com/NotFluted/robert/master/lang/langindex.json'
+                                    link: 'http://git.io/vJ9nI'
                                 }));
                             } else {
                                 robert.settings.language = argument;
@@ -3461,7 +3463,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!robert.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        API.sendChat('/me Robert, is developed and maintained by Fluted! More information can be found here: https://github.com/NotFluted/robert/blob/master/README.md');
+                        API.sendChat('/me Robert is a multifunctional Javascript browser run bot maintained by Fluted. More infomation can be found here: https://goo.gl/dG7i6y');
                     }
                 }
             },
@@ -3474,7 +3476,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("/me Coming soon!");
+                            API.sendChat("Coming soon!");
                     }
                 }
             },
@@ -3513,20 +3515,20 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("plugdj: discord: https://discord.gg/RE8fkzE");
+                            API.sendChat("Did you hear that? plug.dj has an offical Discord server. Join here: https://discord.gg/RE8fkzE");
                     }
                 }
             },	
 		
 	    plugitCommand: {
-                command: 'Plugit',
+                command: 'plugit',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("PlugIt: discord: https://discord.gg//DptCswA");
+                            API.sendChat("Get the Plug-it plugin here: https://github.com/Plug-It/pi/blob/pre-release/readme.md");
                     }
                 }
             },
@@ -3539,7 +3541,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("plug3: https://goo.gl/UB67zH discord: https://discord.gg/AXVZjT");
+                            API.sendChat("Get the Plug3 (PlugCubed) plugin here: https://goo.gl/UB67zH");
                     }
                 }
             },
@@ -3552,7 +3554,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("rcs: https://goo.gl/o6sD2H discord: https://discord.gg/QHvpfNP");
+                            API.sendChat("Get the Radiant Community Script (RCS) here: https://goo.gl/o6sD2H");
                     }
                 }
             },
@@ -3565,7 +3567,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!robert.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("plug.dj guide: http://i.imgur.com/ZeRR07N.png");
+                            API.sendChat("How to use/navigate plug.dj (Click the image to make it bigger): http://i.imgur.com/ZeRR07N.png");
                     }
                  }
             },	
@@ -3776,7 +3778,7 @@
                                 worthyAlg = Math.floor(Math.random() * 10) + 1,
                                 worthy = worthyAlg == 10 ? true : false;
 
-                            // sly benzi 👀
+                            // 👀
                             if (botCreatorIDs.indexOf(id) > -1) {
                                 worthy = true;
                             }
