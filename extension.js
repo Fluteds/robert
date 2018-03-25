@@ -1952,7 +1952,7 @@
             },
 
             bouncerPlusCommand: {
-                command: ['bouncer+', 'bouncerplus'],
+                command: 'bouncer+',
                 rank: 'manager',
                 type: 'exact',
                 functionality: function(chat, cmd) {
@@ -3522,14 +3522,14 @@
             },	
 		
 	    plugitCommand: {
-                command: 'Plugit',
+                command: 'plugit',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("Get the Plug-it extension here: https://github.com/plug-it/pi/blob/pre-release/readme.md ");
+                            API.sendChat("Get the Plug-it plugin/extension here: https://github.com/plug-it/pi/blob/pre-release/readme.md ");
                     }
                 }
             },
@@ -3542,7 +3542,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("Get the Plug3 (PlugCubed) extension here: https://goo.gl/UB67zH");
+                            API.sendChat("Get the Plug3 (PlugCubed) plugin/extension here: https://goo.gl/UB67zH");
                     }
                 }
             },
@@ -3555,7 +3555,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("Get the Radiant Community Script (RCS) extension here: https://goo.gl/o6sD2H");
+                            API.sendChat("Get the Radiant Community Script (RCS) plugin/extension here: https://goo.gl/o6sD2H");
                     }
                 }
             },
