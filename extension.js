@@ -1,13 +1,10 @@
 /**
 
- Copyright © 2017-2018 Fluted 
+ Copyright © 2017-2018 robert
 
  Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
- This software is not for profit, any extension, or unauthorised person providing this software is not authorised to be in a position of any monetary 
- gain from this use of this software. Any and all money gained under the use of the software (which includes donations) must be passed on to the original author.
+ This software is not for profit, any extension, or unauthorised person providing this software is not authorised to be in a position of any monetary gain from this use of this software. Any and all money gained under the use of the software (which includes donations) must be passed on to the original author.
 
- Source repo: basicBot
- 
  */
 
 (function() {
@@ -310,7 +307,7 @@
             afkRankCheck: "ambassador",
             motdEnabled: true,
             motdInterval: 30,
-            motd: "Heck. That really startled me and now I've forgotten what I was supposed to say :(",
+            motd: "Heck. I really have nothing inspirational to say today. Sorry :(",
             filterChat: true,
             etaRestriction: true,
             welcome: true,
@@ -322,16 +319,15 @@
             website: null,
             intervalMessages: [
 		    "None of us really know why you're here since this is a testing room.",
-		    "Find an error with Robert? Let the developers know here: https://goo.gl/rjtvzc",
-		    "Want to move up the waitlist? The room holds regular Roulette waitlist boosts! Don't forget to type in !join when the roulette is live.
+		    "Find an error with Robert? Let the developers know here: https://goo.gl/rjtvzc"	   
 	    ],
-            messageInterval: 3,
+            messageInterval: 5,
             songstats: true,
             commandLiteral: "!",
             blacklists: {
-                nsfw: 'https://rawgit.com/NotFluted/robert/master/blacklists/NSFWlist.json',
-                op: 'https://rawgit.com/NotFluted/robert/master/blacklists/OPlist.json',
-                banned: 'https://rawgit.com/NotFluted/robert/master/blacklists/BANNEDlist.json'
+                NSFW: 'https://rawgit.com/NotFluted/robert/master/blacklists/NSFWlist.json',
+                OP: 'https://rawgit.com/NotFluted/robert/master/blacklists/OPlist.json',
+                BANNED: 'https://rawgit.com/NotFluted/robert/master/blacklists/BANNEDlist.json'
             }
         },
         room: {
@@ -1005,7 +1001,7 @@
             if (typeof lastplay === 'undefined') return;
             if (robert.settings.songstats) {
                 if (typeof robert.chat.songstatistics === 'undefined') {
-                    API.sendChat('/me ' + lastplay.media.author + ' - ' + lastplay.media.title + ': ' + lastplay.score.positive + 'WOOTS' + lastplay.score.grabs + 'GRABS' + lastplay.score.negative + 'MEHS')
+                    API.sendChat('/me ' + lastplay.media.author + ' - ' + lastplay.media.title + ': ' + lastplay.score.positive + 'W/' + lastplay.score.grabs + 'G/' + lastplay.score.negative + 'M.')
                 } else {
                     API.sendChat(subChat(robert.chat.songstatistics, {
                         artist: lastplay.media.author,
@@ -1350,7 +1346,7 @@
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             curses: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'nibba', 'motherfucker', 'modafocka'
+                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
             ]
         },
         connectAPI: function() {
@@ -2576,7 +2572,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!robert.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        var link = '@staff, someone needs your help!';
+                        var link = '(Updated link coming soon)';
                         API.sendChat(subChat(robert.chat.starterhelp, {
                             link: link
                         }));
@@ -3464,7 +3460,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!robert.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        API.sendChat('/me Robert, a custom Javascript browser bot using sources from basicBot is developed and maintained by Fluted! More information can be found here: https://goo.gl/dG7i6y');
+                        API.sendChat('/me Robert, is developed and maintained by Fluted! More information can be found here: https://github.com/NotFluted/robert/blob/master/README.md');
                     }
                 }
             },
@@ -3503,33 +3499,33 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat(":eyes:");
+                            API.sendChat("Event is here: https://i.imgur.com/dsA1eBx.png?1");
                     }
                 }
             },
 		
-	    plugdiscordCommand: {
-                command: 'plugdiscord',
+	    plugdjCommand: {
+                command: 'plugdj',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("Did you hear that? plug.dj has an offical Discord! Join here: https://discord.gg/RE8fkzE");
+                            API.sendChat("plugdj: discord: https://discord.gg/RE8fkzE");
                     }
                 }
             },	
 		
 	    plugitCommand: {
-                command: 'plugit',
+                command: 'Plugit',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("Get the Plug-it plugin/extension here: https://github.com/plug-it/pi/blob/pre-release/readme.md ");
+                            API.sendChat("PlugIt: discord: https://discord.gg//DptCswA");
                     }
                 }
             },
@@ -3542,7 +3538,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("Get the Plug3 (PlugCubed) plugin/extension here: https://goo.gl/UB67zH");
+                            API.sendChat("plug3: https://goo.gl/UB67zH discord: https://discord.gg/AXVZjT");
                     }
                 }
             },
@@ -3555,7 +3551,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("Get the Radiant Community Script (RCS) plugin/extension here: https://goo.gl/o6sD2H");
+                            API.sendChat("rcs: https://goo.gl/o6sD2H discord: https://discord.gg/QHvpfNP");
                     }
                 }
             },
@@ -3568,7 +3564,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!robert.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("How to use plug.dj: http://i.imgur.com/ZeRR07N.png");
+                            API.sendChat("plug.dj guide: http://i.imgur.com/ZeRR07N.png");
                     }
                  }
             },	
