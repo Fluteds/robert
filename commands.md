@@ -9,7 +9,7 @@
 |:-------:|:---------:|:-----------:|
 | !afklimit | X | sets the maximum AFK time. |
 | !botname | (botname) | change the default bot name. |
-| !bouncer+ | — | toggle bouncer+. |
+| !bouncer+, !bouncerplus | — | toggle bouncer+. |
 | !clearchat | — | clears the chat. |
 | !clearlocalstorage | — | clears basicBot data stored on the browser. |
 | !cycle | — | toggle DJ cycle. |
@@ -48,6 +48,8 @@
 | !woot | — | makes the bot woot the current song. |
 
 ### Bouncer
+
+(Note: Users with the Bouncer+ rank cannot use these commands)
 
 | Command | Arguments | Description |
 |:-------:|:---------:|:-----------:|
