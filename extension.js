@@ -3518,14 +3518,14 @@
             },	
 		
 	    plugitCommand: {
-                command: 'Plugit',
+                command: 'plugit',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("PlugIt: discord: https://discord.gg//DptCswA");
+                            API.sendChat("Plug-it:");
                     }
                 }
             },
@@ -3538,7 +3538,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("plug3: https://goo.gl/UB67zH discord: https://discord.gg/AXVZjT");
+                            API.sendChat("Plug3 (plugCubed): https://goo.gl/UB67zH");
                     }
                 }
             },
@@ -3551,7 +3551,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("rcs: https://goo.gl/o6sD2H discord: https://discord.gg/QHvpfNP");
+                            API.sendChat("Radiant Community Script (RCS): https://goo.gl/o6sD2H");
                     }
                 }
             },
