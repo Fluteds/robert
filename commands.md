@@ -24,7 +24,9 @@
 | !usercommands | — | toggle user commands. |
 | !voteskip | (X) | when no argument is specified, returns the current voteskip limit, when X is specified, voteskip limit is updated to the new specified limit. |
 
-### Bouncer+
+### Bouncer+ 
+
+(User with special Bouncer Permissions)
 
 | Command | Arguments | Description |
 |:-------:|:---------:|:-----------:|
@@ -38,6 +40,7 @@
 | !move | @user (X) | moves user to position X on the waitlist, default is position 1. |
 | !remove | @user | remove user from the waitlist. |
 | !roulette | — | start a roulette. |
+| !d | (message) | bot deletes message |
 | !songstats | — | toggle song statistics. |
 | !swap | @user1 @user2 | swaps the position of two users in the waitlist. |
 | !unlock | — | unlock the waitlist. |
@@ -48,7 +51,7 @@
 
 | Command | Arguments | Description |
 |:-------:|:---------:|:-----------:|
-| !stay |	— 	Bot says "Enjoy your stay!" |
+| !stay |	bot says "enjoy your stay!" |
 | !active | (X) | shows how many users chatted in the past X minutes. If no X specified, 60 is set as default. |
 | !afkreset | @user | resets the AFK time of user. |
 | !afktime | @user | shows how long user has been AFK. |
@@ -90,32 +93,34 @@
 
 | Command | Arguments | Description |
 |:-------:|:---------:|:-----------:|
-| !link | — | give a link to the current song. |
+| !link | — | bot gives a link to the current song. |
 
 ### User
 
 | Command | Arguments | Description |
 |:-------:|:---------:|:-----------:|
 | !rcs | link to rcs script/plugin to use for autowooting. |
-| !event | There are events coming up pretty soon!. |
-| !guide | plug.dj guide!. |
+| !plug3 | — | links to plug3 plugin |
+| !plugit | — | links to plug-it plugin |
+| !event | — | there are events coming up pretty soon! |
+| !guide | — | how to use/navigate plug.dj!. |
 | !8ball / !ask | (message) | ask the bot a question, the bot will return random variations of a yes or no answer. |
-| !autowoot | — | links to PlugCubed, the advised script/plugin to use for autowooting. |
-| !ba | — | explains the Brand Ambassador rank. |
+| !autowoot | — | links to plugcubed, the advised script/plugin to use for autowooting. |
+| !ba | — | explains the brand ambassador rank. |
 | !commands | — | gives a link to the commands. |
 | !cookie | (@user) | give a cookie to user. |
-| !discord | 	— 	Links an invite to the room's Discord |
+| !discord | 	— 	links an invite to the room's Discord |
 | !dclookup / !dc | — | use dclookup on yourself. |
 | !emoji | — | returns a link the emoji list. |
 | !eta | — | shows how long before you will reach the booth. |
-| !fb | — | links to the room's Facebook page (if set in the settings). |
+| !fb | — | links to the room's facebook page (if set in the settings). |
 | !ghostbuster | @user | checks if user is ghosting. |
-| !gif / !giphy | (message) | returns gif (from giphy) related to the tag provided. Returns a random gif if no tags are provided. |
-| !help | — | links to an image to help get people started on plug. |
-| !join | — | join the roulette if it's up. |
+| !gif / !giphy | (message) | returns gif (from giphy) related to the tag provided. returns a random gif if no tags are provided. |
+| !help | — | mentions the room's staff, use wisely! |
+| !join | — | join the roulette if it's running. |
 | !leave | — | leave the roulette if you joined. |
-| !link | — | Gives a link to the current song playing. |
-| !op | — | links to the OverPlayed list (if set in the settings). |
+| !link | — | gives a link to the current song playing. |
+| !op | — | links to the overplayed (op) list (if set in the settings). |
 | !ping | — | returns pong! |
 | !rules | — | links to the rules. |
 | !source | — | returns a link to the source information on Github. |
@@ -123,3 +128,15 @@
 | !thor | — | users get moved to position 1 in the waitlist if they're worthy of Thor's hammer. |
 | !website | — | links to the room's website. |
 | !youtube | — | links to the room's youtube page. |
+
+### If there are missing commands on this list, please let me know!
+
+##### If you are reporting a messing command please use the following format:
+
+**Command:** Name of command.
+
+**Rank:** User/Bouncer etc.
+
+**Optional:** What the command does.
+
+Thank you! - Fluted
