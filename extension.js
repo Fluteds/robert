@@ -3460,7 +3460,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!robert.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        API.sendChat('/me Robert, is developed and maintained by Fluted! More information can be found here: https://github.com/NotFluted/robert/blob/master/README.md');
+                        API.sendChat('/me Robert, is developed and maintained by Fluted! More information can be found here: https://goo.gl/dG7i6y');
                     }
                 }
             },
@@ -3473,7 +3473,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("/me Coming soon!");
+                            API.sendChat("/me Want to help develop? Join the Discord here: https://discord.gg/TwjJvjc");
                     }
                 }
             },
@@ -3499,7 +3499,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("Event is here: https://i.imgur.com/dsA1eBx.png?1");
+                            API.sendChat("Hey! Why did you use this command? There isn't an event is happening at the moment!");
                     }
                 }
             },
@@ -3512,7 +3512,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("plugdj: discord: https://discord.gg/RE8fkzE");
+                            API.sendChat("Did you hear that? Plug.dj has it's very own Discord! Join here: https://discord.gg/RE8fkzE");
                     }
                 }
             },	
@@ -3525,7 +3525,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("Plug-it:");
+                            API.sendChat("Plug-it Plugin/Extension: https://github.com/Plug-It/pi/blob/pre-release/README.md");
                     }
                 }
             },
@@ -3538,7 +3538,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("Plug3 (plugCubed): https://goo.gl/UB67zH");
+                            API.sendChat("Plug3 (plugCubed) Plugin/Extension: https://goo.gl/UB67zH");
                     }
                 }
             },
@@ -3551,7 +3551,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("Radiant Community Script (RCS): https://goo.gl/o6sD2H");
+                            API.sendChat("Radiant Community Script (RCS) Plugin/Extension: https://goo.gl/o6sD2H");
                     }
                 }
             },
