@@ -105,7 +105,7 @@
 | !plug3 | — | links to plug3 plugin |
 | !plugit | — | links to plug-it plugin |
 | !event | — | there are events coming up pretty soon! |
-| !guide | — | how to use/navigate plug.dj!. |
+| !help | — | bot shows a photo of how to use/navigate plug.dj!. |
 | !8ball / !ask | (message) | ask the bot a question, the bot will return random variations of a yes or no answer. |
 | !autowoot | — | links to plugcubed, the advised script/plugin to use for autowooting. |
 | !ba | — | explains the brand ambassador rank. |
@@ -118,7 +118,7 @@
 | !fb | — | links to the room's facebook page (if set in the settings). |
 | !ghostbuster | @user | checks if user is ghosting. |
 | !gif / !giphy | (message) | returns gif (from giphy) related to the tag provided. returns a random gif if no tags are provided. |
-| !help | — | mentions the room's staff, use wisely! |
+| !sos | — | this mentions the entire room's staff, use wisely! (not using carefully can result in a mute/ban) |
 | !join | — | join the roulette if it's running. |
 | !leave | — | leave the roulette if you joined. |
 | !link | — | gives a link to the current song playing. |
