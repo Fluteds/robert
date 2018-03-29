@@ -28,9 +28,21 @@ A detailed overview of the possible bot settings can be found in the [source rep
 ## Bugs
 #### (And Errors)
 
-Please report all bugs via the Issues page on this repo or via a DM on my [Twitter](https://twitter.com/messages/compose?recipient_id=”956925165455233024”) (Discord Coming Soon!)
+Please report all bugs via the Issues page on this repo or on [Discord](https://discord.gg/TwjJvjc)
 
 Please provide detailed information and screenshots!
+
+##### Use this format to submit an error/bug.
+
+<short description of problem>
+
+Steps to Reproduce: - Step 1 - Step 2 - etc 
+
+Expected Result: <what should happen when you follow the steps> 
+
+Actual Result: <what really happens> 
+
+Client Settings: <your discord client settings> System Settings: <your system settings>
 
 ##### To Do List
 
@@ -42,6 +54,6 @@ Please provide detailed information and screenshots!
 
 'Robert' is a 'Fork' of [basicBot/Custom](https://github.com/basicBot/custom/) (developed by [Benzi](https://github.com/benzi)) and is being developed by myself to have the room's required and desirable features.
 
-I own **nothing** of the original source code and the API documentary.
+I own **nothing** of the original source code and the API documentary used in original sources.
 
 *No copyright is intended.*
