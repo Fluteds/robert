@@ -1,4 +1,4 @@
-# Robert.
+# [DEV] Robert.
 
 ##### An almost multi functional Javascript based browser bot, for use with [Plug.dj](https://plug.dj) 
 
@@ -28,8 +28,7 @@ A detailed overview of the possible bot settings can be found in the [source rep
 ## Bugs
 #### (And Errors)
 
-Please report all bugs via the Issues page on this repo or via a DM on my [Twitter](https://twitter.com/messages/compose?recipient_id=”956925165455233024”) (Discord Coming Soon!)
-
+Please report all bugs via the Issues page on this repo or on [Discord](https://discord.gg/TwjJvjc)
 Please provide detailed information and screenshots!
 
 ##### To Do List
