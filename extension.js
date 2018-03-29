@@ -2574,7 +2574,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!robert.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        var link = '(Updated link coming soon)';
+                        var link = '@staff, someone needs your help!';
                         API.sendChat(subChat(robert.chat.starterhelp, {
                             link: link
                         }));
