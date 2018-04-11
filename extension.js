@@ -3514,7 +3514,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!bot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            API.sendChat("Did you hear that? Plug.dj has it's very own Discord! Join here: https://discord.gg/RE8fkzE");
+                            API.sendChat("Did you hear that? plug.dj has it's very own Discord! Join here: https://discord.gg/RE8fkzE");
                     }
                 }
             },	
