@@ -321,7 +321,8 @@
             website: null,
             intervalMessages: [
 		    "None of us really know why you're here since this is a testing room.",
-		    "Find an error with Robert? Let the developers know here: https://goo.gl/rjtvzc"	   
+		    "Find an error with Robert? Let the developers know here: https://goo.gl/rjtvzc"	
+		    "Experiencing lag? Type in /cap 1 to reduce avatar lag or clear the chat with /clear "
 	    ],
             messageInterval: 5,
             songstats: true,
