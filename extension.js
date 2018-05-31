@@ -114,7 +114,7 @@
 
     var loadChat = function(cb) {
         if (!cb) cb = function() {};
-        $.get("https://rawgit.com/NotFluted/robert/master/lang/langindex.json", function(json) {
+        $.get("https://rawgit.com/fluteds/robert/master/lang/langindex.json", function(json) {
             var link = robert.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
@@ -255,9 +255,9 @@
         status: true,
         name: "Robert",
         loggedInID: "33104203",
-        scriptLink: "https://rawgit.com/NotFluted/robert/master/extension.js",
+        scriptLink: "https://rawgit.com/fluteds/robert/master/extension.js",
         cmdLink: "https://goo.gl/BX4kGw",
-        chatLink: "https://rawgit.com/NotFluted/robert/master/lang/langindex.json",
+        chatLink: "https://rawgit.com/fluteds/robert/master/lang/langindex.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -265,8 +265,8 @@
         settings: {
             botName: "Robert",
             language: "english",
-            chatLink: "https://rawgit.com/NotFluted/robert/master/lang/langindex.json",
-            scriptLink: "https://rawgit.com/NotFluted/robert/master/extension.js",
+            chatLink: "https://rawgit.com/fluteds/robert/master/lang/langindex.json",
+            scriptLink: "https://rawgit.com/fluteds/robert/master/extension.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -328,9 +328,9 @@
             songstats: true,
             commandLiteral: "!",
             blacklists: {
-                NSFW: 'https://rawgit.com/NotFluted/robert/master/blacklists/NSFWlist.json',
-                OP: 'https://rawgit.com/NotFluted/robert/master/blacklists/OPlist.json',
-                BANNED: 'https://rawgit.com/NotFluted/robert/master/blacklists/BANNEDlist.json'
+                NSFW: 'https://rawgit.com/fluteds/robert/master/blacklists/NSFWlist.json',
+                OP: 'https://rawgit.com/fluteds/robert/master/blacklists/OPlist.json',
+                BANNED: 'https://rawgit.com/fluteds/robert/master/blacklists/BANNEDlist.json'
             }
         },
         room: {
@@ -2741,12 +2741,12 @@
                         }));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get('https://rawgit.com/NotFluted/robert/master/lang/langindex.json', function(json) {
+                        $.get('https://rawgit.com/fluteds/robert/master/lang/langindex.json', function(json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === 'undefined') {
                                 API.sendChat(subChat(robert.chat.langerror, {
-                                    link: 'https://rawgit.com/NotFluted/robert/master/lang/langindex.json'
+                                    link: 'https://rawgit.com/fluteds/robert/master/lang/langindex.json'
                                 }));
                             } else {
                                 robert.settings.language = argument;
